@@ -1,18 +1,18 @@
 import UserActionTypes from "./action-types";
 
 const initialState = {
-  currentUser: null,
+  currentUser: null,   // isso significa que quando começar o login fica zero
 };
 
-const userReducer = (state = initialState, action) => {
+const useReducer = (state = initialState, action ) => {
   switch (action.type) {
     case UserActionTypes.LOGIN:
-      return { ...state, currentUser: action.payload };
+      return {...state, currentUser: action.playload };
     case UserActionTypes.LOGOUT:
-      return { ...state, currentUser: null };
+      return {...state, currentUser: null}
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default userReducer;
+export default useReducer;
