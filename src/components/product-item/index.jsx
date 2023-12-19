@@ -7,14 +7,14 @@ import CustomButton from "../custom-button/index";
 import * as Styles from "./styles";
 
 import {useDispatch} from "react-redux"
-import { addProductToCart } from "../cart/actions";
-// Utilities
+import { addProduct } from "../cart/slice";
+
 
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch()
   
   const handleProductClick = () => {
-    dispatch(addProductToCart(product));
+    dispatch(addProduct(product));
   }
 
   return (

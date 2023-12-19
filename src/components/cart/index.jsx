@@ -13,7 +13,7 @@ const Cart = ({ isVisible, setIsVisible }) => {
 
   const { products }  = useSelector((rootReducer) => rootReducer.cartReducer);
 
-  const ProductsTotalPrice = useSelector(SelectProductsTotalPrice);
+  const ProductsTotalPrice = useSelector(SelectProductsTotalPrice)
 
   return (
     <Styles.CartContainer isVisible={isVisible}>
